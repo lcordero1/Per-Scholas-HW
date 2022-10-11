@@ -1,0 +1,132 @@
+// Here are the functions:
+// 1.
+// (completed above) Define a function, as a function declaration, maxOfTwoNumbersthat takes two numbers as arguments and returns the largest of them. If they are the same, return that number. Use the if-else construct or a ternary expression - the Math.max method is not allowed.
+function maxOfTwoNumbers(x, y) {
+    if (x >= y) {
+        return x;
+    } else {
+        return y;
+    }
+ 
+    // or more "elegantly" using the fantastic ternary expression!
+    // return  x >= y ? x : y;
+}
+ 
+// console.log(maxOfTwoNumbers(3, 9));
+ 
+// 2.
+// Define a function, as a function expression, maxOfThreethat takes three numbers as arguments and returns the largest of them. Again, the Math.max method is not allowed.
+ 
+const maxOfThreeThat = function(num1, num2, num3) {
+    if((num1 >= num2) && (num1 >= num3)) {
+      return num1;
+    } else if ((num2 >= num1) && (num2 >= num3)) {
+    return num2;
+  } else {
+    return num3;
+  }
+}
+//   console.log(maxOfThreeThat(25, 15, 36))
+ 
+  // 3.
+// Define a function, as a function declaration, isCharAVowelthat takes a character as an argument and returns true if it is a vowel, false otherwise.
+ 
+function isCharAVowel(char) {
+  const vowels = ["a", "e", "i", "o", "u"];''
+  let i = 0;
+ 
+  while(char) {
+      if (char === vowels[i]) {
+          return true;
+      } else if (i === vowels.length) {
+          return false;
+      } else {
+          i++;
+      }
+  }
+}
+// console.log("The answer is: " + isCharAVowel("a"));
+ // 4.
+ // Define a function, as a function expression, sumArraythat takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
+ 
+ const sumArray = function(nums) {
+    let sum = 0;
+ 
+    for (let a = 0; a < nums.length; a++) {
+        sum += nums[a]
+    }
+ 
+    return sum;
+}
+console.log(sumArray([12, 24, 36]));
+ 
+ 
+ 
+ // 5.
+// Define a function, as a function declaration, multiplyArraythat takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
+ 
+ 
+function multiplyArrayC(nums2) {
+    let product =1;
+    for (let i=0; i < nums2.length; i++) {
+        product *= nums2[i];
+    }
+    return product;
+}
+console.log("the answer is " + multiplyArrayC([6, 12, 18]));
+// 6.
+// Define a function, as a function expression, numArgsthat returns the number of arguments passed to the function when called.
+ 
+const numArgsProb6 = function(...args) {
+    return arguments.length;
+}
+console.log("The answer is: " + numArgsProb6(2, 3, 4, 5, 6, 7));
+ 
+ 
+ 
+// 7.
+// Define a function, as a function declaration, reverseStringthat takes a string, reverses the characters, and returns it. For example, reverseString('rockstar');would return the string "ratskcor".
+function revString(str) {
+    let rev1 = "reversed: ";
+    let count = -1;
+   
+    for(let k = 0; k < str.length; k++) {
+        rev1 = rev1 + str.substr(count, 1)
+        count--;
+    }
+    return rev1;
+}
+console.log("... " + reverseString("STANLEY YELNATS"));
+ 
+// 8.
+// Define a function, as a function expression, longestStringInArraythat takes an array of strings as an argument and returns the length of the longest string.
+ 
+const longestStringInArrayTXT = function(arrayNUM) {
+    let longestTXT = 0;
+ 
+    for(let x = 0; x < arrayNUM.length; x++) {
+        if(arrayNUM[x].length > longestTXT) {
+            longestTXT = arrayNUM[x].length;
+        }
+    }
+ 
+    return longestTXT;
+ 
+}
+console.log("The longest count: " + longestStringInArrayTXT(["Tommy", "Pickles", "Johnson", "Fortnight", "Fastest"]));
+ 
+// 9.
+// Define a function, as a function declaration, stringsLongerThanthat takes an array of strings and a number as arguments, and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would return ["hello", "morning"].
+function stringsNUMLong(names, num) {
+    const NamesLong = [];
+ 
+    names.forEach((function(str) {
+        if(str.length > num) {
+            NamesLong.push(str);
+        }
+    }));
+ 
+    return NamesLong;
+ 
+}
+console.log("The longer names are: " + stringsLongerThanB(["Vivian", "Tiffany", "Amanda", "Patricia", "Ladi"], 5));
